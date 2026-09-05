@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Politica de privacidad y condiciones de uso de las aplicaciones NatureAR." />
+  <title>Pol&iacute;ticas de privacidad | NatureAR</title>
+  <style>
+    :root {
+      --forest: #07443c;
+      --river: #24a6c9;
+      --stone: #f2f0e7;
+      --ink: #152724;
+      --muted: #5f716d;
+      --line: rgba(7, 68, 60, 0.14);
+      --white: #ffffff;
+      --shadow: 0 22px 60px rgba(21, 39, 36, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-width: 320px;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 0%, rgba(36, 166, 201, 0.18), transparent 30%),
+        var(--stone);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 16px clamp(20px, 5vw, 72px);
+      background: rgba(242, 240, 231, 0.88);
+      border-bottom: 1px solid rgba(7, 68, 60, 0.08);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand img {
+      width: 128px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .nav-groups {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: rgba(21, 39, 36, 0.72);
+      font-size: 0.92rem;
+      font-weight: 650;
+    }
+
+    .nav-primary { margin-left: clamp(28px, 5vw, 76px); }
+    .nav-secondary { margin-left: auto; }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--forest); }
+
+    header {
+      padding: 72px clamp(20px, 5vw, 72px) 44px;
+      background: linear-gradient(135deg, rgba(7, 68, 60, 0.98), rgba(21, 88, 119, 0.94));
+      color: var(--white);
+    }
+
+    .hero-inner,
+    main {
+      width: min(920px, 100%);
+      margin: 0 auto;
+    }
+
+    .label {
+      margin-bottom: 14px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(2.4rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .updated {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.74);
+      font-weight: 650;
+    }
+
+    main {
+      padding: 48px 20px 76px;
+    }
+
+    .intro {
+      margin-bottom: 34px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow);
+    }
+
+    .intro p,
+    section p,
+    section li {
+      color: var(--muted);
+    }
+
+    section {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: var(--forest);
+      font-size: 1.28rem;
+      line-height: 1.25;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 22px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .contact-box {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--forest);
+    }
+
+    .contact-box h2 {
+      color: var(--white);
+    }
+
+    .contact-box p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-box a {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--white);
+      font-weight: 850;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 24px clamp(20px, 5vw, 72px);
+      color: rgba(255, 255, 255, 0.62);
+      background: #041f1c;
+      font-size: 0.86rem;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+    }
+
+    @media (max-width: 680px) {
+      .nav-groups { display: none; }
+      footer { display: block; }
+      footer span { display: block; margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Principal">
+    <a class="brand" href="index.html" aria-label="Volver a NatureAR">
+      <img src="assets/banners/naturear-banner-compact.png" alt="NatureAR" />
+    </a>
+    <div class="nav-groups">
+      <div class="nav-links nav-primary">
+        <a href="index.html#proyecto">Proyecto</a>
+        <a href="index.html#apps">Aplicaciones</a>
+        <a href="index.html#experiencia">Experiencia</a>
+        <a href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="nav-links nav-secondary">
+        <a href="manual.html">Manual de usuario</a>
+        <a href="privacidad.html" aria-current="page">Pol&iacute;ticas de privacidad</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="hero-inner">
+      <p class="label">Documento para usuarios y Play Store</p>
+      <h1>Pol&iacute;ticas de privacidad</h1>
+      <p class="updated">Ultima actualizacion: 24 de agosto de 2026</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>
+        NatureAR es una familia de aplicaciones moviles de realidad aumentada para recorridos en areas silvestres protegidas de Costa Rica, incluyendo Juan Castro Blanco, Arenal, Cano Negro y Volcan Tenorio. Esta pagina explica como se manejan los datos y cuales condiciones aplican al uso de las aplicaciones.
+      </p>
+    </div>
+
+    <section>
+      <h2>1. Informacion que recopilamos</h2>
+      <p>Las aplicaciones NatureAR recopilan unicamente la informacion necesaria para funcionar correctamente.</p>
+      <ul>
+        <li>Datos tecnicos del dispositivo, como sistema operativo, version de la app y registros de error.</li>
+        <li>Informacion de uso anonima para mejorar estabilidad, contenido y rendimiento.</li>
+        <li>Permiso de camara cuando el usuario utiliza funciones de escaneo o realidad aumentada.</li>
+        <li>Ubicacion aproximada solo cuando una funcion especifica lo requiere y el usuario la autoriza.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Uso de la informacion</h2>
+      <p>La informacion se utiliza para operar, mantener y mejorar la experiencia de NatureAR.</p>
+      <ul>
+        <li>Permitir el reconocimiento de marcadores y contenido de realidad aumentada.</li>
+        <li>Corregir errores, mejorar el rendimiento y asegurar compatibilidad con dispositivos.</li>
+        <li>Entender de forma anonima como se usan las aplicaciones.</li>
+        <li>Proteger la seguridad y estabilidad del servicio.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Permisos de la aplicacion</h2>
+      <p>Las aplicaciones pueden solicitar permisos del dispositivo segun la experiencia habilitada.</p>
+      <ul>
+        <li><strong>Camara:</strong> necesaria para escanear marcadores y activar experiencias de realidad aumentada.</li>
+        <li><strong>Ubicacion:</strong> opcional, utilizada solo para funciones basadas en contexto geografico cuando el usuario la autoriza.</li>
+        <li><strong>Almacenamiento:</strong> puede utilizarse para archivos temporales o recursos necesarios de la aplicacion.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Compartir datos</h2>
+      <p>
+        NatureAR no vende ni alquila datos personales. La informacion anonima o agregada puede utilizarse con fines academicos, educativos, tecnicos o de mejora del proyecto, sin identificar personalmente a los usuarios.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Seguridad y almacenamiento</h2>
+      <p>
+        Se aplican medidas razonables para proteger la informacion contra acceso no autorizado, alteracion, divulgacion o destruccion. Ningun sistema es completamente infalible, por lo que el proyecto revisa y mejora sus practicas cuando sea necesario.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Condiciones de uso</h2>
+      <p>Al usar NatureAR, el usuario acepta utilizar la aplicacion de forma responsable durante su visita.</p>
+      <ul>
+        <li>La aplicacion es una herramienta educativa e informativa; no reemplaza senalizacion oficial, instrucciones del parque ni indicaciones de seguridad.</li>
+        <li>El usuario debe respetar senderos, normas del area protegida y recomendaciones del personal autorizado.</li>
+        <li>El contenido puede actualizarse, corregirse o modificarse conforme avance el proyecto.</li>
+        <li>El uso de la camara o ubicacion depende de los permisos otorgados por el usuario en su dispositivo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Derechos del usuario</h2>
+      <p>El usuario puede revocar permisos desde la configuracion de su dispositivo y contactar al equipo para consultas relacionadas con privacidad, soporte o eliminacion de datos proporcionados voluntariamente.</p>
+    </section>
+
+    <section>
+      <h2>8. Cambios en esta politica</h2>
+      <p>
+        Esta politica puede actualizarse para reflejar cambios en las aplicaciones, requisitos de Play Store o mejoras del proyecto. La version vigente estara disponible en esta pagina.
+      </p>
+    </section>
+
+    <div class="contact-box">
+      <h2>Contacto</h2>
+      <p>Para consultas sobre privacidad, soporte o el proyecto NatureAR, puedes escribir al equipo.</p>
+      <a href="mailto:ing.computacion.ssc@gmail.com">ing.computacion.ssc@gmail.com</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 NatureAR · Tecnologico de Costa Rica</p>
+    <span><a href="privacidad.html">Pol&iacute;ticas de privacidad</a> · <a href="mailto:ing.computacion.ssc@gmail.com">ing.computacion.ssc@gmail.com</a></span>
+  </footer>
+</body>
+</html>
