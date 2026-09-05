@@ -66,14 +66,26 @@
       object-fit: contain;
     }
 
+    .nav-groups,
     .nav-links {
       display: flex;
       align-items: center;
+    }
+
+    .nav-groups {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .nav-links {
       gap: 18px;
       font-size: 0.92rem;
       font-weight: 650;
       color: rgba(21, 39, 36, 0.72);
     }
+
+    .nav-primary { margin-left: clamp(28px, 5vw, 76px); }
+    .nav-secondary { margin-left: auto; }
 
     .nav-links a { text-decoration: none; }
     .nav-links a:hover { color: var(--forest); }
@@ -326,11 +338,24 @@
     }
 
     .store-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 32px;
+      padding: 6px 10px;
+      border-radius: 999px;
       text-decoration: none;
       color: var(--forest);
+      background: rgba(36, 166, 201, 0.12);
     }
 
-    .store-link:hover { text-decoration: underline; }
+    .store-link:hover { background: rgba(36, 166, 201, 0.2); }
+
+    .play-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
 
     .status {
       display: inline-flex;
@@ -593,7 +618,7 @@
 
     @media (max-width: 680px) {
       .topbar { position: static; }
-      .nav-links { display: none; }
+      .nav-groups { display: none; }
       .hero { padding-top: 46px; }
       h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
       .hero-actions, .contact-actions { flex-direction: column; }
@@ -611,16 +636,23 @@
   </style>
 </head>
 <body>
+
   <div class="site-shell">
     <nav class="topbar" aria-label="Principal">
       <a class="brand" href="#inicio" aria-label="NatureAR inicio">
         <img src="assets/banners/naturear-banner-compact.png" alt="NatureAR" />
       </a>
-      <div class="nav-links">
-        <a href="#proyecto">Proyecto</a>
-        <a href="#apps">Aplicaciones</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#contacto">Contacto</a>
+      <div class="nav-groups">
+        <div class="nav-links nav-primary">
+          <a href="#proyecto">Proyecto</a>
+          <a href="#apps">Aplicaciones</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div class="nav-links nav-secondary">
+          <a href="manual.html">Manual de usuario</a>
+          <a href="privacidad.html">Pol&iacute;ticas de privacidad</a>
+        </div>
       </div>
     </nav>
 
@@ -701,7 +733,10 @@
               </div>
               <div class="app-footer">
                 <span class="status published">Publicada</span>
-                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ITCRSC.CGLAB.NatureAR.JuanCastroBlanco&amp;pcampaignid=web_share" target="_blank" rel="noopener">Play Store</a>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ITCRSC.CGLAB.NatureAR.JuanCastroBlanco&amp;pcampaignid=web_share" target="_blank" rel="noopener">
+                  <img class="play-icon" src="assets/icons/play-store.svg" alt="" />
+                  Play Store
+                </a>
               </div>
             </article>
 
@@ -718,7 +753,10 @@
               </div>
               <div class="app-footer">
                 <span class="status published">Publicada</span>
-                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ITCRSC.CGLAB.NatureAR.Arenal&amp;pcampaignid=web_share" target="_blank" rel="noopener">Play Store</a>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ITCRSC.CGLAB.NatureAR.Arenal&amp;pcampaignid=web_share" target="_blank" rel="noopener">
+                  <img class="play-icon" src="assets/icons/play-store.svg" alt="" />
+                  Play Store
+                </a>
               </div>
             </article>
 
@@ -808,34 +846,6 @@
         </div>
       </section>
 
-      <section>
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Avance</p>
-            <h2>Estado actual del lanzamiento.</h2>
-          </div>
-
-          <div class="timeline">
-            <article class="milestone">
-              <strong>Juan Castro Blanco</strong>
-              <span>Publicada en Play Store y disponible para descarga.</span>
-            </article>
-            <article class="milestone">
-              <strong>Arenal</strong>
-              <span>Publicada en Play Store y disponible para descarga.</span>
-            </article>
-            <article class="milestone">
-              <strong>Cano Negro</strong>
-              <span>La app se encuentra en revision para su publicacion.</span>
-            </article>
-            <article class="milestone">
-              <strong>Volcan Tenorio</strong>
-              <span>La siguiente aplicacion esta en desarrollo.</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section class="contact" id="contacto">
         <div class="section-inner">
           <p class="section-kicker">Contacto</p>
@@ -845,7 +855,7 @@
           </p>
           <div class="contact-actions">
             <a class="button primary" href="mailto:ing.computacion.ssc@gmail.com">Escribir al equipo</a>
-            <a class="button secondary" href="#inicio">Volver arriba</a>
+            <a class="button secondary" href="privacidad.html">Ver pol&iacute;ticas de privacidad</a>
           </div>
         </div>
       </section>
@@ -853,7 +863,7 @@
 
     <footer>
       <p>© 2026 NatureAR · Tecnologico de Costa Rica</p>
-      <span><a href="mailto:ing.computacion.ssc@gmail.com">ing.computacion.ssc@gmail.com</a></span>
+      <span><a href="privacidad.html">Pol&iacute;ticas de privacidad</a> · <a href="mailto:ing.computacion.ssc@gmail.com">ing.computacion.ssc@gmail.com</a></span>
     </footer>
   </div>
 </body>
